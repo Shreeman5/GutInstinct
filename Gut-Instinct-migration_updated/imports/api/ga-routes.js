@@ -227,6 +227,9 @@ function checkPath() {
             case '/galileo/home':
                 Blaze.render(Template.gaHome, document.body);
                 break;
+            case '/galileo/visualization':
+                Blaze.render(Template.gaVisualization, document.body);
+                break;
             case '/galileo/questions':
                 Blaze.render(Template.gaQuestions, document.body);
                 break;

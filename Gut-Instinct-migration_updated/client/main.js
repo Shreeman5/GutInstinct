@@ -36,6 +36,7 @@ import './templates/galileo/browse/item/_.js';
 
 import './templates/galileo/gaHome/_.js';
 import './templates/galileo/gaQuestions/_.js';
+import './templates/galileo/gaVisualization/_.js';
 import './templates/galileo/gaLanding/_.js';
 import './templates/galileo/gaEntrance/_.js';
 import './templates/galileo/console/_.js';

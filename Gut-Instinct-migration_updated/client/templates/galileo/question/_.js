@@ -23,8 +23,7 @@ Template.gaQuestions.onCreated(function() {
 Template.gaQuestions.events({
     'click #seeViz': function(event) {
         event.preventDefault();
-        // Handle the click event for the visualization link
-        alert('Visualization coming soon!');
-        // You can replace the alert with actual visualization functionality
+        // Redirect to Google.com when the link is clicked
+        window.location.href = 'http://127.0.0.1:5500/iMSMS_emperor_host_static_html/modifiedEmperor.html';
     }
 });
