@@ -2,10 +2,6 @@
 import { Template } from 'meteor/templating';
 import { Router } from 'meteor/iron:router';
 
-// Import both templates
-import './_.html';
-import './gaVisualization.html';
-
 // Configure Iron Router
 Router.configure({
     noRoutesTemplate: null
