@@ -1,4 +1,3 @@
-import './gaVisualization.html';
 import { Template } from 'meteor/templating';
 
 // CSS insertion script

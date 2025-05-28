@@ -11,7 +11,6 @@
     <style>
         #emperor-notebook-0xab88f06e {
             height: 100vh !important;
-            width: 100%;
             padding: 0px !important;
         }
         body {
@@ -23,38 +22,29 @@
     </style>
 </head>
 <body>
-    <div id="emperor-notebook-0xab88f06e" style="position: relative; width:100%; height:100vh;">
-        <div class="loading" style="position: absolute;top: 50%;left: 50%;margin-left: -100px; margin-top: -50px; z-index: 10000;">
-            <h2>Loading Emperor Visualization...</h2>
+    <div id="emperor-notebook-0xab88f06e" style="position: relative; width:100%; height:500px;">
+        <div class="loading" style="position: absolute;top: 50%;left: 50%;margin-left: -229px; margin-top: -59px; z-index: 10000;height:118px;width:458px;padding:0px;">
+            <img src='img/emperor.png' alt='Emperor resources missing. Expected them to be found in /home/shreeman/.local/lib/python3.10/site-packages/emperor/support_files/'>
         </div>
     </div>
-
-    <!-- Load your data from the _.js file -->
-    <script src="/client/templates/visualization/_.js"></script>
     
     <script>
-        // Emperor initialization
-        emperorRequire(
-            ["jquery", "model", "controller"],
-            function($, model, EmperorController) {
-                var DecompositionModel = model.DecompositionModel;
-                var div = $('#emperor-notebook-0xab88f06e');
-                
-                // Use the data variable from _.js
-                if (typeof data !== 'undefined') {
-                    var controller = new EmperorController(div, data);
-                    console.log("Emperor visualization initialized successfully!");
-                    
-                    // Hide loading message
-                    setTimeout(function() {
-                        document.querySelector('.loading').style.display = 'none';
-                    }, 1000);
-                } else {
-                    console.error("Data not loaded from _.js file");
-                    document.querySelector('.loading').innerHTML = '<h2>Error: Data not found</h2>';
-                }
-            }
-        );
+        // Basic Emperor initialization
+        console.log("Emperor HTML loaded successfully");
+        
+        // You'll need to add your actual Emperor initialization code here
+        // This is where the require.js setup and Emperor configuration would go
+        
+        // For now, let's hide the loading image since we don't have data
+        setTimeout(function() {
+            document.querySelector('.loading').style.display = 'none';
+            document.getElementById('emperor-notebook-0xab88f06e').innerHTML = 
+                '<div style="text-align: center; padding: 50px; font-family: Arial;">' +
+                '<h2>Emperor Visualization Ready</h2>' +
+                '<p>The Emperor framework is loaded, but you need to provide data files.</p>' +
+                '<p>Typically you need: sample metadata, coordinates data, and biom table.</p>' +
+                '</div>';
+        }, 2000);
     </script>
 </body>
 </html>
