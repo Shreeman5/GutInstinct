@@ -3,6 +3,7 @@ import {
     UserEmail,
     UserTestResponse
 } from './models.js';
+import { Router } from 'meteor/iron:router';
 import './ga-routes.js';
 
 Router.route('/', function() {
@@ -942,6 +943,10 @@ Router.route('/reset-password/:token', {
     }
 });
 
+Router.route('/galileo/visualization', function() {
+    this.render('emperorVisualization');
+});
+
 Router.onBeforeAction(function() {
 
     function promiseWait(ms) {
@@ -979,3 +984,4 @@ Router.onBeforeAction(function() {
         "galileo.blog.why-exp-beer", "galileo.blog.why-exp-spice", "galileo.blog.why-exp-circadian","galileo.blog.why-exp-nerdnite", "galileo.blog.why-exp-probiotics"
     ]
 });
+

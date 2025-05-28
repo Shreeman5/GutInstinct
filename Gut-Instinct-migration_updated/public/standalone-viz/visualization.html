@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emperor Visualization</title>
+    <meta charset="utf-8">
+    
+    <!-- Core dependencies -->
+    <script src="vendor/js/require-2.1.22.min.js"></script>
+    <script src="vendor/js/jquery-2.1.4.min.js"></script>
+    
+    <style>
+        #emperor-notebook-0xab88f06e {
+            height: 100vh !important;
+            width: 100%;
+            padding: 0px !important;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="emperor-notebook-0xab88f06e" style="position: relative; width:100%; height:100vh;">
+        <div class="loading" style="position: absolute;top: 50%;left: 50%;margin-left: -100px; margin-top: -50px; z-index: 10000;">
+            <h2>Loading Emperor Visualization...</h2>
+        </div>
+    </div>
+
+    <!-- Load your data from the _.js file -->
+    <script src="/client/templates/visualization/_.js"></script>
+    
+    <script>
+        // Emperor initialization
+        emperorRequire(
+            ["jquery", "model", "controller"],
+            function($, model, EmperorController) {
+                var DecompositionModel = model.DecompositionModel;
+                var div = $('#emperor-notebook-0xab88f06e');
+                
+                // Use the data variable from _.js
+                if (typeof data !== 'undefined') {
+                    var controller = new EmperorController(div, data);
+                    console.log("Emperor visualization initialized successfully!");
+                    
+                    // Hide loading message
+                    setTimeout(function() {
+                        document.querySelector('.loading').style.display = 'none';
+                    }, 1000);
+                } else {
+                    console.error("Data not loaded from _.js file");
+                    document.querySelector('.loading').innerHTML = '<h2>Error: Data not found</h2>';
+                }
+            }
+        );
+    </script>
+</body>
+</html>

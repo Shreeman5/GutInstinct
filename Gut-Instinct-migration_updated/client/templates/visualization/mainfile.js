@@ -1,7 +1,10 @@
 // Update the existing _.js file to include the new route for visualization
-import './_.html';
 import { Template } from 'meteor/templating';
 import { Router } from 'meteor/iron:router';
+
+// Import both templates
+import './_.html';
+import './gaVisualization.html';
 
 // Configure Iron Router
 Router.configure({
@@ -13,11 +16,13 @@ Router.route('/', function() {
     this.render('gaVisualization');
 });
 
+// Add new route for the visualization page
 Router.route('/galileo/visualization', function() {
     this.render('gaVisualization');
 });
 
-Template.gaVisualization.onCreated(function() {
+// Events for gaQuestions template
+Template.gaQuestions.onCreated(function() {
     // Initialize any necessary variables
 });
 

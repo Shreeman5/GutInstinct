@@ -2,8 +2,7 @@
 import {
     ParticipationStatus,
     ErrorMessage
-} from './ga-models/constants';
-
+} from "./ga-models/constants";
 import { Meteor } from "meteor/meteor";
 import { Bookmarks } from './models';
 
@@ -227,11 +226,11 @@ function checkPath() {
             case '/galileo/home':
                 Blaze.render(Template.gaHome, document.body);
                 break;
-            case '/galileo/visualization':
-                Blaze.render(Template.gaVisualization, document.body);
-                break;
             case '/galileo/questions':
                 Blaze.render(Template.gaQuestions, document.body);
+                break;
+            case '/galileo/visualization':
+                Blaze.render(Template.emperorVisualization, document.body);
                 break;
             case '/galileo/blog/why-exp':
                 redirect('/galileo/blog/tutorial');
