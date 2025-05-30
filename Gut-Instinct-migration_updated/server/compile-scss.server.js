@@ -7,7 +7,7 @@ if (Meteor.isServer) {
   const fs    = require('fs');
   const path  = require('path');
 
-const PROJECT_ROOT = 'Home/Desktop/Gut-Instinct-migration_updated';   // ← adjust if you move the repo
+const PROJECT_ROOT = '.';   // ← adjust if you move the repo
 
 // input ↔ output pairs
 const inputFilePath1  = path.join(PROJECT_ROOT, 'client/styles/main.scss');

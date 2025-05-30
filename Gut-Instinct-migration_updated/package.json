@@ -20,6 +20,7 @@
     "find-up": "^2.1.0",
     "jquery": "^3.7.1",
     "meteor-node-stubs": "^0.4.1",
+    "mongodb": "^6.3.0",
     "node-sass": "^4.5.2",
     "normalize-strings": "^1.1.1",
     "os-browserify": "^0.3.0",
